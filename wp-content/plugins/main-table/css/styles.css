@@ -11,6 +11,7 @@ background-color: #fff;
 color:#666;
 border: 1px solid #ccc;
 letter-spacing: -.04em;
+font-size: 11px;
 /*font-weight: bold;*/
 
 }
@@ -59,7 +60,7 @@ z-index: 999;
   width: 100px;*/
 }
 .table_div {
-  width: 4000px;
+  width: 1000px;
   position: relative;
   padding-right: 60px;
 }
@@ -120,20 +121,20 @@ z-index: 999;
 {
   position: relative;
   text-align: center;
-  min-width: 35px;
+  min-width: 25px;
   padding-bottom: 11px;
+  padding: 0;
+
 }
  
  
 .features-table th.grey
 {
   background: #EAEAEA;
-
-
-  height: 50px;
+  height: 20px;
   padding: 2px 5px 2px 5px;
   font-weight: bold;
-  font-size: 17px;
+  font-size: 14px;
   box-shadow: 0 1px 0 #ACACAC;
   -moz-box-shadow: 0 1px 0 #ACACAC;
   -webkit-box-shadow: 0 1px 0 #ACACAC;
@@ -158,9 +159,12 @@ z-index: 999;
   vertical-align: middle;
   text-shadow: none;
   color:#333;
+  width: 220px;
 }
  
-
+.grey [type=text] {
+  width: 100px;
+}
  
 .features-table td:nowrap
 {
@@ -207,7 +211,7 @@ z-index: 999;
   background: none;
   border: none;
   box-shadow: none;
-  width: 300px;
+  min-width: 150px;
   /*color: #94A0A9;*/
   color: #33373B;
 /*  font-weight: bold;*/
@@ -217,7 +221,7 @@ z-index: 999;
   background: none;
   border: none;
   box-shadow: none;
-  width: 300px;
+  min-width: 150px;
   /*color: #94A0A9;*/
   color: #33373B;
 /*  font-weight: bold;*/

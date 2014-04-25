@@ -19,13 +19,13 @@
 define('DB_NAME', 'u356887_table');
 
 /** MySQL database username */
-define('DB_USER', 'u356887_table');
+define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', '.Eura_6OLeg2m');
+define('DB_PASSWORD', 'root');
 
 /** MySQL hostname */
-define('DB_HOST', 'u356887.mysql.masterhost.ru');
+define('DB_HOST', 'localhost');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
