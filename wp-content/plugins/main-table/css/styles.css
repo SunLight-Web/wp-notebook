@@ -5,8 +5,8 @@ body {
 -moz-border-radius: 2px;
 -webkit-border-radius: 2px;
 border-radius: 2px;
-padding: 3px 6px;
-margin: 10px 0 7px;
+/*padding: 3px 6px;
+margin: 10px 0 7px;*/
 background-color: #fff;
 color:#666;
 border: 1px solid #ccc;
@@ -20,7 +20,7 @@ font-size: 11px;
 
  .features-table
 {
-  margin: 0 auto;
+/*  margin: 0 auto;*/
   /*border-spacing: 0;
   text-shadow: 0 1px 0 #fff;
   margin-top:20px;
@@ -45,7 +45,7 @@ border-radius:10px;
     font-size:12px;
     text-shadow: 1px 1px 0px #fff;
     background: #f6f6f6;
-    margin:20px;
+/*    margin:20px;*/
     border:#bbb 1px solid;
     border-collapse:separate;
 /*padding-top: 50px;
@@ -62,7 +62,7 @@ z-index: 999;
 .table_div {
   width: 1000px;
   position: relative;
-  padding-right: 60px;
+/*  padding-right: 60px;*/
 }
 /*
 .main-table-block {
@@ -78,7 +78,7 @@ z-index: 999;
    border-left: 1px solid #CBCBCB;
    /*border-right: 1px solid #ACACAC;*/
   height: 50px;
-  padding: 2px 5px 2px 5px;
+/*  padding: 2px 5px 2px 5px;*/
 /*  border-bottom: 1px solid #A5B1BA;*/
   box-shadow: 0 1px 0 #ACACAC;
   -moz-box-shadow: 0 1px 0 #ACACAC;
@@ -122,8 +122,8 @@ z-index: 999;
   position: relative;
   text-align: center;
   min-width: 25px;
-  padding-bottom: 11px;
-  padding: 0;
+/*  padding-bottom: 11px;
+  padding: 0;*/
 
 }
  
@@ -132,7 +132,7 @@ z-index: 999;
 {
   background: #EAEAEA;
   height: 20px;
-  padding: 2px 5px 2px 5px;
+/*  padding: 2px 5px 2px 5px;*/
   font-weight: bold;
   font-size: 14px;
   box-shadow: 0 1px 0 #ACACAC;
@@ -149,7 +149,7 @@ z-index: 999;
   background: #EAEAEA;
 
   height: 50px;
-  padding: 2px 5px 2px 5px;
+/*  padding: 2px 5px 2px 5px;*/
   font-weight: bold;
   font-size: 17px;
   box-shadow: 0 1px 0 #ACACAC;
@@ -173,7 +173,7 @@ z-index: 999;
 }
 
 .features-table thead{
-  margin-top: 100px;
+/*  margin-top: 100px;*/
 
 }
 
@@ -255,7 +255,7 @@ z-index: 999;
     width: 100%;
     height: 1px;
     background-color: black;
-    margin-top: -7px;
+/*    margin-top: -7px;*/
   }
   .add-new-client input, .add-new-info input{
     border: 1px solid #0074a2;
@@ -271,7 +271,7 @@ z-index: 999;
   }
 
   .add-new-client table , .add-new-info table{
-    margin-top: 20px;
+/*    margin-top: 20px;*/
   }
   .add-new-client table tr td:first-child{
     width: 260px;
@@ -282,7 +282,7 @@ z-index: 999;
   .add-new-info{
    /* float: left;*/
     width: 500px;
-    margin-bottom: 50px;
+/*    margin-bottom: 50px;*/
 /*    margin-left: 80px;*/
   }
   .add-new-info table tr td:first-child{
@@ -291,7 +291,7 @@ z-index: 999;
     font-size: 14px;
   }
   .submit-info{
-    margin-top: -5px;
+    /*margin-top: -5px;*/
   }
 
   .error_jquery{
@@ -324,11 +324,11 @@ background:#FFFFE0;
 border: 1px solid #9ADF8F;
 color:#556652 !important;
 width:100% !important;
-padding:8px 8px 8px 36px;
+/*padding:8px 8px 8px 36px;*/
 text-align:left;
-margin:2px;
+/*margin:2px;
 margin-left: 0px;
-margin-top: 30px;
+margin-top: 30px;*/
 width:750px !important;
 }
 
@@ -338,11 +338,11 @@ background:#FFCECE;
 border: 1px solid #DF8F8F;
 color:#665252 !important;
 width:100% !important;
-padding:8px 8px 8px 36px; 
+/*padding:8px 8px 8px 36px; */
 text-align:left;
-margin:5px;
+/*margin:5px;
 margin-left: 0px;
-margin-top: 30px;
+margin-top: 30px;*/
 width:750px !important;
 }   
 .main-button {
@@ -359,7 +359,7 @@ width:750px !important;
   font-family: "Open Sans",sans-serif;
   color: #ffffff;
   font-size: 20px;
-  padding: 10px 20px 10px 20px;
+/*  padding: 10px 20px 10px 20px;*/
   text-decoration: none;
 }
 
@@ -420,9 +420,9 @@ option {
   font-family: Arial,sans-serif;
   text-align: left;
   font-size: 12px;
-  padding-left: 15px;
+/*  padding-left: 15px;*/
   width: 500px;
-  margin: 0 auto;
+/*  margin: 0 auto;*/
 }
 .poll_body p {
 
@@ -437,19 +437,19 @@ option {
   border: 1px solid #ccc;
 }
 .poll_body .polls_table td {
-  padding-left: 15px;
+/*  padding-left: 15px;*/
 }
  .th_text {
   /*font-weight: normal;*/
-  padding-top: 20px;
-  padding-left: 15px;
+/*  padding-top: 20px;
+  padding-left: 15px;*/
  }
 .polls_table .td_border_bottom {
    border-bottom: 1px solid #ccc;
-   padding-bottom: 20px;
+/*   padding-bottom: 20px;*/
 }
 .polls_table input {
-  margin-right: 15px;
+/*  margin-right: 15px;*/
 
 }
 .polls_table textarea {
@@ -460,8 +460,8 @@ option {
   background: #fff;
 }
 .input_button {
-  margin-bottom: 10px;
-  margin-top: 10px;
+/*  margin-bottom: 10px;
+  margin-top: 10px;*/
 }
 
 .poll_iframe_title {
@@ -471,7 +471,7 @@ option {
   
 }
 .th_textarea {
- padding-left: 15px;
+/* padding-left: 15px;*/
 }
 
 
@@ -496,14 +496,14 @@ option {
     .messageview h3{
       font-size: 16px;
       width: 50%;
-      margin: 0 auto;
+      /*margin: 0 auto;
       margin-bottom: 10px;
-      margin-top: 30px;
+      margin-top: 30px;*/
 
     }
     .messageview .message_messageview {
       width: 50%;
-      margin: 0 auto;
+      /*margin: 0 auto;*/
       font-size: 14px;
       border: 1px solid #ccc;
       background: #fff;
@@ -519,9 +519,9 @@ option {
     }
     .messageview .address_messageview {
       font-weight: bold;
-      margin-top: 50px;
+/*      margin-top: 50px;*/
       width: 50%;
-      margin: 0 auto;
+/*      margin: 0 auto;*/
       font-size: 16px;
     }
     .messageview .address_messageview span {
@@ -529,8 +529,8 @@ option {
     }
 
 
-    .tableFloatingHeader {
-      padding-top: 32px;
+/*    .tableFloatingHeader {
+      padding-top: 32px;*/
     }
 
     #textarea_memo_div {
@@ -553,8 +553,8 @@ option {
 /* модальное окно мемо*/
 select.select-main{
   width:190px;
-  margin-top:30px;
-  padding-bottom: 20px;
+/*  margin-top:30px;*/
+/*  padding-bottom: 20px;*/
 }
 .mask {
   width: 100%;
@@ -608,7 +608,7 @@ select.select-main{
   resize: none;
 width: 654px;
 height: 400px;
-margin: 25px;
+/*margin: 25px;*/
  border-radius:10px;
 -moz-border-radius:10px;
     -webkit-border-radius:10px;
@@ -624,7 +624,7 @@ margin: 25px;
 .dialog_a {
   position: absolute;
   font-size: 10px;
-  margin-left: -35px;
+/*  margin-left: -35px;*/
 }
 
 #boxes_whoisworking .window, #boxes_country .window {
@@ -650,8 +650,9 @@ margin: 25px;
 
 
 .add-new-info input.del-btn{
-  margin-top: 10px;
-  margin-left: 10px;
+/*  margin-top: 10px;
+  margin-left: 10px;*/
   float: right;
 }
   /* //модальное окно мемо сountry*/
+
