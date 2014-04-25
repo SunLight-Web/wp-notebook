@@ -490,7 +490,7 @@ $objectLink = $objectLink[0]['objects_link'];
                     <form name="fitler-form" method="post" action="">
                <tr id="filterClients">
                     <td scope="col" class="grey">
-                      <input type="submit" value="Применить" name="filter-the-table" id='go' class="button-secondary">
+                      <input type="submit" value="Ф!" name="filter-the-table" id='go' class="button-secondary">
                     </td>
                     <td scope="col" style="" class="grey">
                       <input type="checkbox" name="needs-to-filter[]" value="client_typeOfDeal">
@@ -617,11 +617,11 @@ $objectLink = $objectLink[0]['objects_link'];
                     <th scope="col" style="" class="grey">Страна</th>
                     <th scope="col" style="" class="grey">Источник</th>
                     <th scope="col" style="" class="grey">Дата</th>
-                    <th scope="col" style="" class="grey">Посл. изменение</th>
+                    <th scope="col" style="" class="grey">Изменение</th>
                     <th scope="col" style="" class="grey">Кто работает</th>
                     <th scope="col" style="" class="grey">МЕМО</th>
                     <th scope="col" style="" class="grey">Объекты</th>
-                    <th scope="col" style="" class="grey">Номер клиента</th>
+                    <th scope="col" style="" class="grey">Номер</th>
                     <th scope="col" style="" class="grey">Приоритет</th>
                     <th scope="col" style="" class="grey">Пройденные опросы</th>
                     <th scope="col" style="" class="grey">Рассылка</th>    
@@ -733,7 +733,7 @@ $objectLink = $objectLink[0]['objects_link'];
                       <?php foreach (explode(",", $tableStuffToFill[$i]['client_country']) as $val) {
                         echo $val . "<br>";
                       } ?>
-                      <a href="#dialog_country_<?php echo $idOfCurrentClient; ?>" id="<?php echo $idOfCurrentClient; ?>" name="modal" class="dialog_a">Редактировать</a>
+                      <a href="#dialog_country_<?php echo $idOfCurrentClient; ?>" id="<?php echo $idOfCurrentClient; ?>" name="modal" class="dialog_a">- / +</a>
                   </td>
 
                    <td>
@@ -767,7 +767,7 @@ $objectLink = $objectLink[0]['objects_link'];
                       <?php foreach (explode(",", $tableStuffToFill[$i]['client_whoisworking']) as $val) {
                         echo $val . "<br>";
                       } ?>
-                    <a href="#dialog_whoisworking_<?php echo $idOfCurrentClient; ?>" id="<?php echo $idOfCurrentClient; ?>" name="modal" class="dialog_a">Редактировать</a>
+                    <a href="#dialog_whoisworking_<?php echo $idOfCurrentClient; ?>" id="<?php echo $idOfCurrentClient; ?>" name="modal" class="dialog_a">- / +</a>
                     </td>
 
                     <td>
