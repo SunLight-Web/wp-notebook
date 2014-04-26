@@ -347,32 +347,8 @@ document.getElementById('listOfPolls' + id).style.display = "block";
 }
 
 
-
-// jQuery(document).ready(function() {
-  
-//     $("#main-table").tablesorter({ 
-//         headers: { 
-//             0: {  sorter: false  }, 
-//             3: {  sorter: false  },
-//            10: {  sorter: false  },
-//            14: {  sorter: false  },
-//            15: {  sorter: false  }
-//                  } 
-//     }); 
-  
-// });
-
-
 </script>
-<script>
-  $(this).ready(function () {
-    $(".tr_dblclick").dblclick(
-      function () {
-      $(".input_dblclick", this).attr('checked',true)
-    });
-});
 
-</script>
 
 <!-- модальное  окно мемо-->
 <script>
@@ -418,6 +394,81 @@ function openPopUp(clid) {
 </script>
 <!-- модальное окно мемо-->
 
+<script type="text/javascript">
+$(document).ready(function () {
+var table = document.getElementById('table-body');
+inputs = table.getElementsByTagName('input');
+for (index = 0; index < inputs.length; ++index) {
+inputs[index].readOnly = true;
+}
+inputs = table.getElementsByTagName('textarea');
+for (index = 0; index < inputs.length; ++index) {
+inputs[index].readOnly = true;
+}
+inputs = table.getElementsByTagName('select');
+for (index = 0; index < inputs.length; ++index) {
+inputs[index].disabled = true;
+}
+$('.dialog_a').hide();
+$('.objectsInput').hide();
+  $('a[name=edit-tr]').click(function(e) {
+    e.preventDefault();
+    var id = $(this).attr('href');
+    var table = document.getElementById(id + '_row');
+
+  inputs = table.getElementsByTagName('input');
+  for (index = 0; index < inputs.length; ++index) {
+  inputs[index].readOnly = false;
+  }
+  inputs = table.getElementsByTagName('textarea');
+  for (index = 0; index < inputs.length; ++index) {
+  inputs[index].readOnly = false;
+  }
+  inputs = table.getElementsByTagName('select');
+  for (index = 0; index < inputs.length; ++index) {
+  inputs[index].disabled = false;
+  }
+$('.edit-button', table).hide();
+$(".input_dblclick", table).attr('checked',true);
+$(".saveOrNotBlock", table).show();
+$(".dialog_a", table).show();
+$(".objectsInput", table).show();
+  });
+  $(".saveitall").click(function(e) {
+  e.preventDefault();
+  if (confirm('Сохранить?')){
+document.getElementById('saveData').value = 'go';
+document.getElementById('rowManage').submit();
+  } else {
+
+  }});
+  $(".dontsave").click(function(e) {
+  e.preventDefault();
+
+  var table = document.getElementById('table-body');
+inputs = table.getElementsByTagName('input');
+for (index = 0; index < inputs.length; ++index) {
+inputs[index].readOnly = true;
+}
+inputs = table.getElementsByTagName('textarea');
+for (index = 0; index < inputs.length; ++index) {
+inputs[index].readOnly = true;
+}
+inputs = table.getElementsByTagName('select');
+for (index = 0; index < inputs.length; ++index) {
+inputs[index].disabled = true;
+}
+$('.dialog_a').hide();
+$('.objectsInput').hide();
+
+
+  $(".input_dblclick", table).attr('checked',false);
+  $(".saveOrNotBlock", table).hide();
+  $(".edit-button", table).show();
+  });
+});
+</script>
+
 
 <!-- модальное окно boxes_whoisworking и boxes_country-->
 <script>
@@ -439,10 +490,8 @@ $(document).ready(function() {
       $(id).fadeIn(400);
     });
   $('.window .sendit').click(function (e) {
-    document.getElementById(idOfUser + "checkbox").checked = true;
-    document.getElementById('saveData').value = 'go';
-    $('.mask, .window').hide();
-    document.getElementById('rowManage').submit();
+    e.preventDefault();
+    $(".mask, .window").hide();
   });
 
   $('.window .close').click(function (e) {
@@ -603,6 +652,7 @@ $objectLink = $objectLink[0]['objects_link'];
                     </td>
                     <td scope="col" style="" class="grey"><!-- <input type="submit" style="float: right;" value="Отфильтровать" name="filter-the-table" class="button-secondary"> --></td>
                     <td scope="col" style="" class="grey"><!-- Рассылка --></td> 
+                    <th scope="col" class="grey"></th>
          <!--        </form> -->
                     </form>
                 </tr>
@@ -625,9 +675,10 @@ $objectLink = $objectLink[0]['objects_link'];
                     <th scope="col" style="" class="grey">Приоритет</th>
                     <th scope="col" style="" class="grey">Пройденные опросы</th>
                     <th scope="col" style="" class="grey">Рассылка</th>    
+                    <th scope="col" class="grey"></th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="table-body">
 
              <?php 
               for($i=0; $i<=$totalRecordForQuery-1; $i++){ 
@@ -638,7 +689,8 @@ $objectLink = $objectLink[0]['objects_link'];
 <!-- модальное окно boxes_сountry-->
 <div id="boxes_country">
   <div id="dialog_country_<?php echo $idOfCurrentClient; ?>" class="window">
-        <select name='<?php echo "$idOfCurrentClient" . ",newCountry[]"; ?>' multiple class="select-main" id='<?php echo "$idOfCurrentClient" . ",newCountry"; ?>'>  
+    <li style='font-size:10px; list-style-type:none;'>
+
         <?php
           $dealsWeHave  = $wpdb->get_results("SELECT country FROM new_values WHERE country != ''",'ARRAY_A');
           $arrayToCompare = array();
@@ -648,24 +700,24 @@ $objectLink = $objectLink[0]['objects_link'];
           $arrayOfDealsForClient = explode(",", $tableStuffToFill[$i]['client_country']);
           $diffBetweenDeals = array_diff($arrayToCompare, $arrayOfDealsForClient);
             foreach ($arrayOfDealsForClient as $val) {
-                echo "<option value='" . $val . "' selected>" . $val . "</option>";  
+                   echo "<ul>" . "<input type='checkbox' checked name='" . $idOfCurrentClient . ",newCountry[]' value='" . $val . "'>" . $val . "</ul>";
              } 
 
                   foreach ($diffBetweenDeals as $val) {
-                     echo "<option value='" . $val . "'>" . $val . "</option>";
+                   echo "<ul>" . "<input type='checkbox' name='" . $idOfCurrentClient . ",newCountry[]' value='" . $val . "'>" . $val . "</ul>";
             } 
       ?>
-    </select>
+  </li>
   <span><a href="#" class="close"/>Закрыть</a></span>
       <button type="button" class="sendit button-secondary">Отправить</button>
   </div>
 </div>
 
 
-
 <div id="boxes_whoisworking" >
   <div id="dialog_whoisworking_<?php echo $idOfCurrentClient; ?>" class="window">
-      <select name='<?php echo "$idOfCurrentClient" . ",newWhoIsWorking[]"; ?>' multiple class="select-main" id='<?php echo "$idOfCurrentClient" . ",newWhoIsWorking"; ?>'>
+    <li style='font-size:10px; list-style-type:none;'>
+     
       <?php
           $dealsWeHave    = $wpdb->get_results("SELECT worker FROM new_values WHERE worker != ''",'ARRAY_A');
           $arrayToCompare = array();
@@ -675,14 +727,14 @@ $objectLink = $objectLink[0]['objects_link'];
           $arrayOfDealsForClient = explode(",", $tableStuffToFill[$i]['client_whoisworking']);
           $diffBetweenDeals = array_diff($arrayToCompare, $arrayOfDealsForClient);
               foreach ($arrayOfDealsForClient as $val) {
-                echo "<option value='" . $val . "' selected>" . $val . "</option>";  
+                echo "<ul>" . "<input type='checkbox' checked name='" . $idOfCurrentClient . ",newWhoIsWorking[]' value='" . $val . "'>" . $val . "</ul>"; 
               } 
 
               foreach ($diffBetweenDeals as $val) {
-                 echo "<option value='" . $val . "'>" . $val . "</option>";                                                                              
+                echo "<ul>" . "<input type='checkbox' name='" . $idOfCurrentClient . ",newWhoIsWorking[]' value='" . $val . "'>" . $val . "</ul>";                                                                     
               }
       ?>
-    </select>
+    </li>
   <span><a href="#" class="close"/>Закрыть</a></span>
     <button type="button" class="sendit button-secondary">Отправить</button>
   </div>
@@ -691,7 +743,7 @@ $objectLink = $objectLink[0]['objects_link'];
 
               
     <!-- /WINDOWS -->
-                <tr class="tr_dblclick">
+                <tr class="tr_dblclick" id="<?php echo $idOfCurrentClient; ?>_row">
                     <td >
                       <input class="input_dblclick" id="<?php echo $idOfCurrentClient . 'checkbox';?>" type='checkBox' name='ckboxs[]'  value="<?php echo $idOfCurrentClient; ?>">
                     </td>
@@ -785,7 +837,7 @@ $objectLink = $objectLink[0]['objects_link'];
                       }
 
                       ?>
-                      <input type="text" id='<?php echo "$idOfCurrentClient" . ",newObjects"; ?>' value='<?php echo $tableStuffToFill[$i]['client_objects']; ?>' name='<?php echo "$idOfCurrentClient" . ",newObjects"; ?>' class="textarea-main">
+                      <input class="objectsInput" type="text" id='<?php echo "$idOfCurrentClient" . ",newObjects"; ?>' value='<?php echo $tableStuffToFill[$i]['client_objects']; ?>' name='<?php echo "$idOfCurrentClient" . ",newObjects"; ?>' class="textarea-main">
                     </td>
 
                     <td>
@@ -798,6 +850,7 @@ $objectLink = $objectLink[0]['objects_link'];
                       <input value="1" id='<?php echo "$idOfCurrentClient" . ",newPriority"; ?>' name='<?php echo "$idOfCurrentClient" . ",newPriority"; ?>' type="checkbox" <?php if($tableStuffToFill[$i]['client_priority'] == 1) echo ' checked'; ?>>
                     </td>
                     <td>
+
                       <div style="width:250px;"></div>
                       <?php
 
@@ -870,6 +923,17 @@ $objectLink = $objectLink[0]['objects_link'];
                           echo "<a target='_blank' href='" . plugin_dir_url(__FILE__) . "messageview.php?id=" . $value['id'] . "' >" . $value['email_sent_date'] . " " . $value['email_subject'] . "</a><br>";
                         }
                       } ?>
+                    </td>
+                    <td>
+                        <div class="edit-button">
+                          <a name="edit-tr" href="<?php echo $idOfCurrentClient; ?>">edit</a>
+                        </div>
+
+                        <div class="saveOrNotBlock" style='display: none;'>
+                          <input type="submit" class="button-secondary saveitall" value="СОХРАНИТЬ" style="width:102px;">
+                          <br>
+                          <a class="dontsave" style="font-size:9px;" onclick='return confirm("Не сохранять? Не забудьте поставить галочку в первом столбце таблицы, если передумаете.")' name="stop">Не сохранять</a>
+                        </div>
                     </td>    
                 </tr>
 
@@ -880,7 +944,7 @@ $objectLink = $objectLink[0]['objects_link'];
             </div>
               <div class="link-to-next-page">
                   <input type="hidden" value="" id="saveData" name="saveData">
-                  <input type="submit" class="button-secondary" value="Сохранить изменения" id="saveData" name="saveData">
+                  <input type="submit" class="button-secondary" value="Сохранить всё" id="saveData" name="saveData">
                   <input type="submit" class="button-secondary" value="Добавить клиента" id="addNewRow" name="addNewRow">
                   <input type="submit" class="button-secondary" value="Удалить" id="removeRow" name="removeRow">
                   <input type="submit" class="button-secondary" value="Отправить email" id="mass-email" name="mass-email">
