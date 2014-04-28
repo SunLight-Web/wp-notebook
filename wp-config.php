@@ -22,11 +22,11 @@ define('DB_NAME', 'black_one');
 define('DB_USER', 'root');
 
 /** MySQL database password */
-<<<<<<< HEAD
+
 define('DB_PASSWORD', '');
-=======
+
 define('DB_PASSWORD', 'root');
->>>>>>> FETCH_HEAD
+
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');

@@ -785,7 +785,7 @@ $objectLink = $objectLink[0]['objects_link'];
                       <?php foreach (explode(",", $tableStuffToFill[$i]['client_country']) as $val) {
                         echo $val . "<br>";
                       } ?>
-                      <a href="#dialog_country_<?php echo $idOfCurrentClient; ?>" id="<?php echo $idOfCurrentClient; ?>" name="modal" class="dialog_a">- / +</a>
+                      <a href="#dialog_country_<?php echo $idOfCurrentClient; ?>" id="<?php echo $idOfCurrentClient; ?>" name="modal" class="dialog_a">[+] / [-]</a>
                   </td>
 
                    <td>
@@ -819,7 +819,7 @@ $objectLink = $objectLink[0]['objects_link'];
                       <?php foreach (explode(",", $tableStuffToFill[$i]['client_whoisworking']) as $val) {
                         echo $val . "<br>";
                       } ?>
-                    <a href="#dialog_whoisworking_<?php echo $idOfCurrentClient; ?>" id="<?php echo $idOfCurrentClient; ?>" name="modal" class="dialog_a">- / +</a>
+                    <a href="#dialog_whoisworking_<?php echo $idOfCurrentClient; ?>" id="<?php echo $idOfCurrentClient; ?>" name="modal" class="dialog_a">[+] / [-]</a>
                     </td>
 
                     <td>
