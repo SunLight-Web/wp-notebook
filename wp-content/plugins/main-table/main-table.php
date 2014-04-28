@@ -599,7 +599,7 @@ $objectLink = $objectLink[0]['objects_link'];
                     </td>
                     <td scope="col" style="" class="grey">
 
-                      <input type="checkbox" name="needs-to-filter[]" value="client_date">
+                      <input type="checkbox" name="needs-to-filter[]" value="client_date"><br/>
                       От:<input type="text" name="filter_date_from" class="tcal" style="width:66px;" value="" />
                       До:<input type="text" name="filter_date_to" class="tcal" style="width:66px;" value="" />
 
@@ -607,7 +607,7 @@ $objectLink = $objectLink[0]['objects_link'];
                     </td>
                     <td scope="col" style="" class="grey">
 
-                      <input type="checkbox" name="needs-to-filter[]" value="client_date_lm">
+                      <input type="checkbox" name="needs-to-filter[]" value="client_date_lm"><br/>
                       От:<input type="text" name="filter_date_lm_from" class="tcal" style="width:66px;" value="" />
                       До:<input type="text" name="filter_date_lm_to" class="tcal" style="width:66px;" value="" />
 
