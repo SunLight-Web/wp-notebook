@@ -703,5 +703,9 @@ th {
 .window [type=button] {
   margin-top: 20px;
 }
+
+.link-to-next-page {
+  padding-top: 20px;
+}
 =======
 >>>>>>> FETCH_HEAD
