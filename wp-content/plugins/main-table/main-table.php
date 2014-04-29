@@ -531,10 +531,12 @@ $objectLink = $objectLink[0]['objects_link'];
   if ($totalRecordForQuery != 0)
   {
 ?>
-          <div class="mask"></div>
+            
+            <div class="mask"></div>
             <div class="main-table-block">
             <div class="table_div">
-            <table id="main-table" class="features-table" style="width:100%;">
+            <div class="tableCont">
+            <table id="main-table" class="features-table" >
             <thead>
                     <form name="fitler-form" method="post" action="">
                <tr id="filterClients">
@@ -2281,8 +2283,8 @@ if ($_POST['sendParticularEmail'])
                  </tbody>       
                 </table>
            </div>
-
-
+           </div>
+           
          <?php 
 
            }
@@ -2298,3 +2300,4 @@ if ($_POST['sendParticularEmail'])
   }
 
 // :яиротсИ
+            
