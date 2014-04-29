@@ -648,7 +648,8 @@ $objectLink = $objectLink[0]['objects_link'];
 
                     </td>
                     <td scope="col" style="" class="grey">
-
+                      Ф? 
+                      П!<br/>
                       <input type="checkbox" name="needs-to-filter[]" value="client_priority">
                       <input type="checkbox" value="1" name="filter_priority" id="filter_priority" style="height: 16px;">
                     </td>
